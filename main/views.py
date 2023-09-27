@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.db.models import Q
-from django.shortcuts import render, redirect
 from django.http import JsonResponse
+from django.shortcuts import render, redirect
 from django.views import View
 from main.models import ProductList, ShoppingCart
 from main.utils import increment_count, decrement_count
@@ -100,4 +100,3 @@ def confirmation(request):
 
 def contact(request):
     return render(request, "contact.html")
-
