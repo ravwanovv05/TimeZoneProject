@@ -1,11 +1,10 @@
 from django.contrib import messages
 from django.db.models import Q
 from django.shortcuts import render, redirect
-
-# Create your views here.
+from django.http import JsonResponse
 from django.views import View
-
 from main.models import ProductList, ShoppingCart
+from main.utils import increment_count, decrement_count
 
 
 class HomeView(View):
@@ -55,6 +54,20 @@ class ShoppingCartView(View):
         shopping_cart = ShoppingCart.objects.get(Q(product_id=id), Q(user=user))
         shopping_cart.delete()
         return redirect('/cart')
+
+
+class IncrementCountView(View):
+    def post(self, request):
+        id = request.POST.get('id')
+        result = increment_count(id)
+        return JsonResponse({'result': result})
+
+
+class DecrementCountView(View):
+    def post(self, request):
+        id = request.POST.get('id')
+        result = decrement_count(id)
+        return JsonResponse({'result': result})
 
 
 def about(request):
