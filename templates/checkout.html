@@ -42,7 +42,7 @@
               <div class="check_title">
                 <h2>
                   Returning Customer?
-                  <a href="#">Click here to login</a>
+                  <a href="login">Click here to login</a>
                 </h2>
               </div>
               <p>
@@ -52,12 +52,14 @@
               </p>
               <form class="row contact_form" action="#" method="post" novalidate="novalidate">
                 <div class="col-md-6 form-group p_star">
+                    {% csrf_token %}
+                    <label for="username">Username</label><br>
                   <input type="text" class="form-control" id="name" name="name" value=" " />
-                  <span class="placeholder" data-placeholder="Username or Email"></span>
                 </div>
                 <div class="col-md-6 form-group p_star">
+                    <label for="password">Password</label><br>
                   <input type="password" class="form-control" id="password" name="password" value="" />
-                  <span class="placeholder" data-placeholder="Password"></span>
+
                 </div>
                 <div class="col-md-12 form-group">
                   <button type="submit" value="submit" class="btn_3">
