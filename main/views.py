@@ -12,7 +12,9 @@ class HomeView(View):
     context = {}
 
     def get(self, request):
-        return render(request, self.template_name)
+        products = ProductList.objects.all()[2:]
+        self.context.update({'products': products})
+        return render(request, self.template_name, self.context)
 
 
 class ShopView(View):
@@ -20,7 +22,7 @@ class ShopView(View):
     context = {}
 
     def get(self, request):
-        products = ProductList.objects.all()
+        products = ProductList.objects.all()[:2]
         self.context.update({'products': products})
         return render(request, self.template_name, self.context)
 
