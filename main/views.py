@@ -1,3 +1,5 @@
+import json
+
 from django.contrib import messages
 from django.db.models import Q
 from django.http import JsonResponse
@@ -45,10 +47,19 @@ class ShoppingCartView(View):
     context = {}
 
     def get(self, request):
-        shopping_cart = ShoppingCart.objects.filter(user=request.user).values('product_id')
-        products = ProductList.objects.filter(pk__in=shopping_cart)
-        self.context.update({'products': products})
-        return render(request, self.template_name, self.context)
+        try:
+            shopping_cart = ShoppingCart.objects.filter(user=request.user).values('product_id')
+            products = ProductList.objects.filter(pk__in=shopping_cart)
+            data = []
+            for product in products:
+                shop = ShoppingCart.objects.get(Q(user=request.user) & Q(product=product))
+                product.count = shop.count
+                data.append(product)
+            self.context.update({'products': data})
+            return render(request, self.template_name, self.context)
+        except:
+            messages.error(request, 'Enter your account!')
+            return redirect('/')
 
     def post(self, request):
         id = request.POST.get('id')
@@ -60,15 +71,23 @@ class ShoppingCartView(View):
 
 class IncrementCountView(View):
     def post(self, request):
-        id = request.POST.get('id')
-        result = increment_count(id)
+        try:
+            json_data = json.loads(request.body.decode('utf-8'))
+            id = json_data.get('id')
+        except json.JSONDecodeError:
+            id = None
+        result = increment_count(id, request.user)
         return JsonResponse({'result': result})
 
 
 class DecrementCountView(View):
     def post(self, request):
-        id = request.POST.get('id')
-        result = decrement_count(id)
+        try:
+            json_data = json.loads(request.body.decode('utf-8'))
+            id = json_data.get('id')
+        except json.JSONDecodeError:
+            id = None
+        result = decrement_count(id, request.user)
         return JsonResponse({'result': result})
 
 

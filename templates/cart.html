@@ -89,9 +89,9 @@
                     </td>
                     <td>
                       <div class="product_count">
-                          <button class="btn_3" type="button" onclick="decrement({{ product.id }})">-</button>
-                          <input class="input-number" type="number" value="1" min="0" max="10">
-                          <button class="btn_3" onclick="increment({{ product.id }})">+</button>
+                          <button class="btn_3" type="button" onclick="decrement({{ product.id }})">&minus;</button>
+                          <input class="input-number" type="number" value="{{ product.count }}" min="0"  placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                          <button class="btn_3" type="button" onclick="increment({{ product.id }})">&plus;</button>
                       </div>
                     </td>
                     <td>
@@ -198,37 +198,57 @@
 
 {% block js %}
     <!-- JS here -->
+    <script src="{% static './assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="{% static './assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static './assets/js/popper.min.js' %}"></script>
+    <script src="{% static './assets/js/bootstrap.min.js' %}"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="{% static './assets/js/jquery.slicknav.min.js' %}"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="{% static './assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static './assets/js/slick.min.js' %}"></script>
 
-  <script src="{% static './assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
-  <!-- Jquery, Popper, Bootstrap -->
-  <script src="{% static './assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
-  <script src="{% static './assets/js/popper.min.js' %}"></script>
-  <script src="{% static './assets/js/bootstrap.min.js' %}"></script>
-  <!-- Jquery Mobile Menu -->
-  <script src="{% static './assets/js/jquery.slicknav.min.js' %}"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="{% static './assets/js/wow.min.js' %}"></script>
+    <script src="{% static './assets/js/animated.headline.js' %}"></script>
 
-  <!-- Jquery Slick , Owl-Carousel Plugins -->
-  <script src="{% static './assets/js/owl.carousel.min.js' %}"></script>
-  <script src="{% static './assets/js/slick.min.js' %}"></script>
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="{% static './assets/js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static './assets/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static './assets/js/jquery.sticky.js' %}"></script>
+    <script src="{% static './assets/js/jquery.magnific-popup.js' %}"></script>
 
-  <!-- One Page, Animated-HeadLin -->
-  <script src="{% static './assets/js/wow.min.js' %}"></script>
-  <script src="{% static './assets/js/animated.headline.js' %}"></script>
-  
-  <!-- Scrollup, nice-select, sticky -->
-  <script src="{% static './assets/js/jquery.scrollUp.min.js' %}"></script>
-  <script src="{% static './assets/js/jquery.nice-select.min.js' %}"></script>
-  <script src="{% static './assets/js/jquery.sticky.js' %}"></script>
-  <script src="{% static './assets/js/jquery.magnific-popup.js' %}"></script>
+    <!-- contact js -->
+    <script src="{% static './assets/js/contact.js' %}"></script>
+    <script src="{% static './assets/js/jquery.form.js' %}"></script>
+    <script src="{% static './assets/js/jquery.validate.min.js' %}' %}"></script>
+    <script src="{% static './assets/js/mail-script.js' %}"></script>
+    <script src="{% static './assets/js/jquery.ajaxchimp.min.js' %}"></script>
 
-  <!-- contact js -->
-  <script src="{% static './assets/js/contact.js' %}"></script>
-  <script src="{% static './assets/js/jquery.form.js' %}"></script>
-  <script src="{% static './assets/js/jquery.validate.min.js' %}' %}"></script>
-  <script src="{% static './assets/js/mail-script.js' %}"></script>
-  <script src="{% static './assets/js/jquery.ajaxchimp.min.js' %}"></script>
-  
-  <!-- Jquery Plugins, main Jquery -->	
-  <script src="{% static './assets/js/plugins.js' %}"></script>
-  <script src="{% static './assets/js/main.js' %}"></script>
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="{% static './assets/js/plugins.js' %}"></script>
+    <script src="{% static './assets/js/main.js' %}"></script>
+
+    <!-- Increment Function -->
+    <script>
+        const increment = (id) => {
+            fetch('http://127.0.0.1:8000/increment-count', {
+                method: 'POST',
+                body: JSON.stringify({
+                    id: id
+                })
+            }).then(rsp=>rsp.json()).then(response=>console.log())
+        }
+
+        const decrement = (id) => {
+            fetch('http://127.0.0.1:8000/decrement-count', {
+                method: 'POST',
+                body: JSON.stringify({
+                    id: id
+                })
+            }).then(rsp=>rsp.json()).then(response=>console.log())
+        }
+
+    </script>
 {% endblock %}
