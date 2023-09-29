@@ -1,10 +1,11 @@
 import json
-
 from django.contrib import messages
 from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.views import View
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+
 from main.models import ProductList, ShoppingCart
 from main.utils import increment_count, decrement_count
 
@@ -92,6 +93,25 @@ class DecrementCountView(View):
             id = None
         result = decrement_count(id, request.user)
         return JsonResponse({'result': result})
+
+
+class AddProductView(CreateView):
+    model = ProductList
+    template_name = "add_product.html"
+    fields = ('name', 'price', 'description')
+
+    def post(self, request):
+        name = request.POST.get('name')
+        price = request.POST.get('price')
+        description = request.POST.get('description')
+        author = request.user
+
+        product = ProductList.objects.create(
+            name=name,
+            price=price,
+            description=description,
+            author=author
+        )
 
 
 def about(request):

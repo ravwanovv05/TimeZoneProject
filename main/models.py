@@ -11,6 +11,7 @@ class ProductList(models.Model):
     description = models.TextField()
 
 
+
 class ShoppingCart(models.Model):
     product = models.ForeignKey(ProductList, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
