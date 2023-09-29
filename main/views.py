@@ -24,9 +24,12 @@ class ShopView(View):
     context = {}
 
     def get(self, request):
-        products = ProductList.objects.all()[:2]
-        self.context.update({'products': products})
-        return render(request, self.template_name, self.context)
+        try:
+            products = ProductList.objects.all()[:2]
+            self.context.update({'products': products})
+            return render(request, self.template_name, self.context)
+        except:
+            return redirect('/')
 
     def post(self, request):
         id = request.POST.get('id')
