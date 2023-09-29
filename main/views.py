@@ -33,16 +33,19 @@ class ShopView(View):
             return redirect('/')
 
     def post(self, request):
-        id = request.POST.get('id')
-        user_id = request.user.id
-        products_id = set([i['product_id'] for i in ShoppingCart.objects.filter(user_id=user_id).values('product_id')])
-        if int(id) not in list(products_id):
-            shopping_cart = ShoppingCart.objects.create(
-                product_id=id,
-                user_id=user_id
-            )
-            shopping_cart.save()
-            messages.info(request, 'Successfully added!')
+        try:
+            id = request.POST.get('id')
+            user_id = request.user.id
+            products_id = set([i['product_id'] for i in ShoppingCart.objects.filter(user_id=user_id).values('product_id')])
+            if int(id) not in list(products_id):
+                shopping_cart = ShoppingCart.objects.create(
+                    product_id=id,
+                    user_id=user_id
+                )
+                shopping_cart.save()
+                messages.info(request, 'Successfully added!')
+        except:
+            messages.error(request, "Enter your account!")
         return redirect('shop')
 
 
@@ -66,11 +69,14 @@ class ShoppingCartView(View):
             return redirect('/')
 
     def post(self, request):
-        id = request.POST.get('id')
-        user = request.user
-        shopping_cart = ShoppingCart.objects.get(Q(product_id=id), Q(user=user))
-        shopping_cart.delete()
-        return redirect('/cart')
+        try:
+            id = request.POST.get('id')
+            user = request.user
+            shopping_cart = ShoppingCart.objects.get(Q(product_id=id), Q(user=user))
+            shopping_cart.delete()
+            return redirect('/cart')
+        except:
+            return redirect('/cart')
 
 
 class IncrementCountView(View):
