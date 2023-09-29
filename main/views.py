@@ -45,7 +45,7 @@ class ShopView(View):
                 shopping_cart.save()
                 messages.info(request, 'Successfully added!')
         except:
-            messages.error(request, "Enter your account!")
+            messages.error(request, "Please, enter your account!")
         return redirect('shop')
 
 
