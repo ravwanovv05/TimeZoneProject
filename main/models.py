@@ -6,10 +6,18 @@ User = get_user_model()
 
 class ProductList(models.Model):
     name = models.CharField(max_length=150)
-    image = models.ImageField(upload_to='pics')
     price = models.FloatField()
     description = models.TextField()
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    def create(self, validated_data):
+        print(validated_data)
+        return super().save(**validated_data)
+
+
+class Picture(models.Model):
+    image = models.ImageField(upload_to='pics')
+    product = models.ForeignKey(ProductList, on_delete=models.CASCADE)
 
 
 class ShoppingCart(models.Model):

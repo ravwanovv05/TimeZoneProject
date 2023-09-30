@@ -18,5 +18,5 @@ urlpatterns = [
     path('contact', contact),
     path('increment-count', csrf_exempt(IncrementCountView.as_view()), name='increment'),
     path('decrement-count', csrf_exempt(DecrementCountView.as_view()), name='decrement'),
-    path('add_product', AddProductView.as_view(), name='add_product')
+    path('add-product', AddProductView.as_view(), name='add_product')
 ]

@@ -118,6 +118,9 @@ class AddProductView(CreateView):
             description=description,
             author=author
         )
+        product.save()
+        return redirect('/add-product')
+
 
 
 def about(request):
