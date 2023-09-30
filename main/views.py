@@ -6,7 +6,8 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
-from main.models import ProductList, ShoppingCart
+from main.forms import ProductForm
+from main.models import ProductList, ShoppingCart, Picture
 from main.utils import increment_count, decrement_count
 
 
@@ -27,6 +28,10 @@ class ShopView(View):
     def get(self, request):
         try:
             products = ProductList.objects.all()[:2]
+            images = Picture.objects.all()[:2]
+            for d in range(products):
+                products[d]['image'] = images[d]
+            print(products.values())
             self.context.update({'products': products})
             return render(request, self.template_name, self.context)
         except:
@@ -105,22 +110,35 @@ class AddProductView(CreateView):
     model = ProductList
     template_name = "add_product.html"
     fields = ('name', 'price', 'description')
+    form_class = ProductForm
+
+    def get(self, request):
+        form = self.form_class
+        return render(request, self.template_name, {'form': form})
 
     def post(self, request):
-        name = request.POST.get('name')
-        price = request.POST.get('price')
-        description = request.POST.get('description')
-        author = request.user
+        form = self.form_class(request.POST, request.FILES)
+        if form.is_valid():
+            name = request.POST.get('name')
+            price = request.POST.get('price')
+            description = request.POST.get('description')
+            author = request.user
 
-        product = ProductList.objects.create(
-            name=name,
-            price=price,
-            description=description,
-            author=author
-        )
-        product.save()
-        return redirect('/add-product')
-
+            product = ProductList.objects.create(
+                name=name,
+                price=price,
+                description=description,
+                author=author
+            )
+            product.save()
+            images = form.files.getlist('image')
+            for image in images:
+                picture = Picture.objects.create(
+                    image=image,
+                    product=product
+                )
+                picture.save()
+            return redirect('/add-product')
 
 
 def about(request):
