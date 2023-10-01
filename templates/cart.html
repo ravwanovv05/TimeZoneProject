@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load custom_tags %}
 
 {% block css %}
   <!-- CSS here -->
@@ -87,15 +88,15 @@
                     <td>
                       <h5>${{ product.price }}</h5>
                     </td>
-                    <td>
+                    <td onload="calculate_total({{ product.price }}, {{ product.id }})">
                       <div class="product_count">
-                          <button class="btn_3" type="button" onclick="decrement({{ product.id }})">&minus;</button>
-                          <input class="input-number" type="number" value="{{ product.count }}" min="0"  placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                          <button class="btn_3" type="button" onclick="increment({{ product.id }})">&plus;</button>
+                          <button class="btn_3" type="button" onclick="decrement({{ product.price }}, {{ product.id }})">&minus;</button>
+                          <input class="input-number" id="product_count_{{ product.id }}" type="number" value="{{ product.count }}" min="0" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                          <button class="btn_3" type="button" onclick="increment({{ product.price }}, {{ product.id }})">&plus;</button>
                       </div>
                     </td>
                     <td>
-                      <h5>${{ product.price }}</h5>
+                      <span id="total_price_{{ product.id }}" ></span>
                     </td>
                     <td>
                         <form method="post">
@@ -232,22 +233,38 @@
 
     <!-- Increment Function -->
     <script>
-        const increment = (id) => {
+        const increment = (price, id) => {
             fetch('http://127.0.0.1:8000/increment-count', {
                 method: 'POST',
                 body: JSON.stringify({
                     id: id
                 })
             }).then(rsp=>rsp.json()).then(response=>console.log())
+            calculate_total(price, id, 1)
         }
 
-        const decrement = (id) => {
+        const decrement = (price, id) => {
             fetch('http://127.0.0.1:8000/decrement-count', {
                 method: 'POST',
                 body: JSON.stringify({
                     id: id
                 })
             }).then(rsp=>rsp.json()).then(response=>console.log())
+            calculate_total(price, id, 2)
+        }
+
+        const calculate_total = (price,id, value) => {
+            let product_count = document.getElementById('product_count_' + id).value
+            if (value === 1){
+                product_count++
+            }
+            else {
+                product_count--
+            }
+            const total_price = price * product_count
+            if (total_price > 0){
+                document.getElementById('total_price_' + id).innerHTML = '$' + `${total_price}`
+            }
         }
 
     </script>

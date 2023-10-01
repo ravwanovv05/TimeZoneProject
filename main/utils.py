@@ -17,10 +17,7 @@ def decrement_count(id, user):
     try:
         shopping_cart = ShoppingCart.objects.get(Q(product_id=id) & Q(user=user))
         shopping_cart.count -= 1
-        if shopping_cart.count == 0:
-            shopping_cart.delete()
-        else:
-            shopping_cart.save()
+        shopping_cart.save()
     except:
         return False
     return True
