@@ -27,11 +27,7 @@ class ShopView(View):
 
     def get(self, request):
         try:
-            products = ProductList.objects.all()[:2]
-            images = Picture.objects.all()[:2]
-            for d in range(products):
-                products[d]['image'] = images[d]
-            print(products.values())
+            products = ProductList.objects.all()
             self.context.update({'products': products})
             return render(request, self.template_name, self.context)
         except:
