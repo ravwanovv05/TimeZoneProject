@@ -258,13 +258,11 @@
             if (value === 1){
                 product_count++
             }
-            else {
+            else if (value === 2 && product_count > 0) {
                 product_count--
             }
             const total_price = price * product_count
-            if (total_price > 0){
-                document.getElementById('total_price_' + id).innerHTML = '$' + `${total_price}`
-            }
+            document.getElementById('total_price_' + id).innerHTML = '$' + `${total_price}`
         }
 
     </script>

@@ -1,3 +1,4 @@
+from django.core.validators import MinValueValidator
 from django.db import models
 from django.contrib.auth import get_user_model
 
@@ -23,7 +24,9 @@ class Picture(models.Model):
 class ShoppingCart(models.Model):
     product = models.ForeignKey(ProductList, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    count = models.PositiveIntegerField(default=1)
+    count = models.PositiveIntegerField(
+        validators=[MinValueValidator(1)], default=1
+    )
     uploaded_date = models.DateTimeField(auto_now_add=True)
 
 
