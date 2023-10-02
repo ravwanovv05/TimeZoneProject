@@ -1,5 +1,5 @@
 from django import template
-
+from django.template.loader import render_to_string
 
 register = template.Library()
 
@@ -11,5 +11,9 @@ def total_price(price, count):
 
 
 @register.simple_tag
-def custom_for():
-    pass
+def custom_for(product_list):
+    rendered_items = []
+    for product in product_list:
+        render_item = render_to_string('product_cart.html', {'product': product})
+        rendered_items.append(render_item)
+    return '\n'.join(rendered_items)

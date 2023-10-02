@@ -1,0 +1,33 @@
+{% load custom_tags %}
+<tr>
+    <td>
+      <div class="media">
+        <div class="d-flex">
+          <img src="{{ product.image.url }}" alt="" />
+        </div>
+        <div class="media-body">
+          <p>{{ product.name }}</p>
+        </div>
+      </div>
+    </td>
+    <td>
+      <h5>${{ product.price }}</h5>
+    </td>
+    <td onload="calculate_total({{ product.price }}, {{ product.id }})">
+      <div class="product_count">
+          <button class="btn_3" type="button" onclick="decrement({{ product.price }}, {{ product.id }})">&minus;</button>
+          <input class="input-number" id="product_count_{{ product.id }}" type="number" value="{{ product.count }}" min="0" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+          <button class="btn_3" type="button" onclick="increment({{ product.price }}, {{ product.id }})">&plus;</button>
+      </div>
+    </td>
+    <td>
+      <span id="total_price_{{ product.id }}" >${% total_price product.price, product.count %}</span>
+    </td>
+    <td>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="id" value="{{ product.id }}">
+            <button class="btn_1" type="submit">X</button>
+        </form>
+    </td>
+</tr>
