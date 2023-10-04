@@ -109,6 +109,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+LANGUAGES = (
+    ('en', 'English'),
+    ('ru', 'Russian')
+)
 
 TIME_ZONE = 'Asia/Tashkent'
 
@@ -127,6 +131,8 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
+
 LOGIN_URL = '/accounts/login'
 SHOP_URL = '/shop'
 
