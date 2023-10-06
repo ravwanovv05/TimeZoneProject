@@ -31,7 +31,3 @@ class ProductForm(forms.Form):
     description = forms.CharField(label='Description', widget=forms.Textarea(attrs={
         'class': 'form-control'
     }))
-
-
-
-
