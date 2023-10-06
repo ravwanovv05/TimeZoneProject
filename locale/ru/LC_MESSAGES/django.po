@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-05 23:32+0500\n"
+"POT-Creation-Date: 2023-10-07 00:51+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,24 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: main/apps.py:8
+msgid "main"
+msgstr "Основной"
+
+#: main/models.py:20
+#, fuzzy
+#| msgid "Product list"
+msgid "ProductsList"
+msgstr "Список продуктов"
+
+#: main/models.py:28
+msgid "Picture"
+msgstr "Картина"
+
+#: main/models.py:29
+msgid "Pictures"
+msgstr "Картинки"
 
 #: templates/base.html:33
 msgid "Home"
@@ -1292,3 +1310,8 @@ msgstr ""
 #: venv/lib/python3.11/site-packages/modeltranslation/widgets.py:24
 msgid "None"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Product list"
+#~ msgid "ProductList"
+#~ msgstr "Список продуктов"

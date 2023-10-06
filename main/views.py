@@ -5,7 +5,6 @@ from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-
 from main.forms import ProductForm
 from main.models import ProductList, ShoppingCart, Picture
 from main.utils import increment_count, decrement_count
@@ -28,7 +27,12 @@ class ShopView(View):
     def get(self, request):
         try:
             products = ProductList.objects.all()
-            self.context.update({'products': products})
+            product_data = []
+            for product in products:
+                image = Picture.objects.filter(product=product).first()
+                product.image = image
+                product_data.append(product)
+            self.context.update({'products': product_data})
             return render(request, self.template_name, self.context)
         except:
             return redirect('/')

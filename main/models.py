@@ -1,6 +1,7 @@
 from django.core.validators import MinValueValidator
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.utils.translation import gettext_lazy as _
 
 User = get_user_model()
 
@@ -15,10 +16,17 @@ class ProductList(models.Model):
         print(validated_data)
         return super().save(**validated_data)
 
+    class Meta:
+        verbose_name_plural = _('ProductsList')
+
 
 class Picture(models.Model):
     image = models.ImageField(upload_to='pics')
     product = models.ForeignKey(ProductList, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = _('Picture')
+        verbose_name_plural = _('Pictures')
 
 
 class ShoppingCart(models.Model):
