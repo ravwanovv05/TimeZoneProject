@@ -1,4 +1,5 @@
-from django.http import HttpResponseForbidden
+from django.http import HttpResponseForbidden, JsonResponse
+from django.views import View
 
 
 class IPRestrictedMiddleware:
@@ -15,3 +16,9 @@ class IPRestrictedMiddleware:
             return HttpResponseForbidden('Permission denied!')
         response = self.get_response(request)
         return response
+
+
+# First API
+class HelloAPIView(View):
+    def get(self, request):
+        return JsonResponse({'success': True, 'message': 'Hello World!'})

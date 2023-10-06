@@ -1,6 +1,7 @@
 from django.urls import path
 from django.views.decorators.csrf import csrf_exempt
 
+from .middleware import HelloAPIView
 from .views import about, product_details, blog, blog_details, ShoppingCartView, checkout, elements, \
     confirmation, contact, HomeView, ShopView, IncrementCountView, DecrementCountView, AddProductView
 
@@ -18,5 +19,6 @@ urlpatterns = [
     path('contact', contact),
     path('increment-count', csrf_exempt(IncrementCountView.as_view()), name='increment'),
     path('decrement-count', csrf_exempt(DecrementCountView.as_view()), name='decrement'),
-    path('add-product', AddProductView.as_view(), name='add_product')
+    path('add-product', AddProductView.as_view(), name='add_product'),
+    path('hello', HelloAPIView.as_view(), name='hello')
 ]
