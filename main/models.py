@@ -17,6 +17,7 @@ class ProductList(models.Model):
         return super().save(**validated_data)
 
     class Meta:
+        verbose_name = _('ProductList')
         verbose_name_plural = _('ProductsList')
 
 

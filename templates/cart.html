@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load custom_tags %}
+{% load i18n %}
 
 {% block css %}
   <!-- CSS here -->
@@ -26,7 +27,7 @@
                   <div class="row">
                       <div class="col-xl-12">
                           <div class="hero-cap text-center">
-                              <h2>Cart List</h2>
+                              <h2>{% translate 'Cart List' %}</h2>
                           </div>
                       </div>
                   </div>
@@ -41,10 +42,10 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Product</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Total</th>
+                    <th scope="col">{% translate 'Product' %}</th>
+                    <th scope="col">{% translate 'Price' %}</th>
+                    <th scope="col">{% translate 'Quantity' %}</th>
+                    <th scope="col">{% translate 'Total' %}</th>
                   </tr>
                 </thead>
                 <tbody>

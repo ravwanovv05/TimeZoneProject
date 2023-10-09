@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-08 17:35+0500\n"
+"POT-Creation-Date: 2023-10-09 14:36+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,14 +31,20 @@ msgstr "Основной"
 #: main/models.py:20
 #, fuzzy
 #| msgid "Product list"
+msgid "ProductList"
+msgstr "Список продуктов"
+
+#: main/models.py:21
+#, fuzzy
+#| msgid "Product list"
 msgid "ProductsList"
 msgstr "Список продуктов"
 
-#: main/models.py:28
+#: main/models.py:29
 msgid "Picture"
 msgstr "Картина"
 
-#: main/models.py:29
+#: main/models.py:30
 msgid "Pictures"
 msgstr "Картинки"
 
@@ -50,7 +56,7 @@ msgstr ""
 msgid "Shop"
 msgstr "Магазин"
 
-#: templates/base.html:35
+#: templates/base.html:35 templates/base.html:128
 msgid "About"
 msgstr "О нас"
 
@@ -103,6 +109,104 @@ msgstr "Оформление заказа продукта"
 #: templates/base.html:57
 msgid "Contact"
 msgstr "Контакт"
+
+#: templates/base.html:126
+msgid "Quick Links"
+msgstr "Быстрые ссылки"
+
+#: templates/base.html:129
+msgid "Offers & Discounts"
+msgstr "Предложения и скидки"
+
+#: templates/base.html:130
+msgid "Get Coupon"
+msgstr "Получить купон"
+
+#: templates/base.html:131
+#, fuzzy
+#| msgid "Contact"
+msgid "Contact Us"
+msgstr "Контакт"
+
+#: templates/base.html:139
+#, fuzzy
+#| msgid "Product list"
+msgid "New Products"
+msgstr "продукт"
+
+#: templates/base.html:141
+msgid "Woman Cloth"
+msgstr "Женская платья"
+
+#: templates/base.html:142
+msgid "Fashion Accessories"
+msgstr "Модные аксессуары"
+
+#: templates/base.html:143
+msgid "Man Accessories"
+msgstr "Мужские аксессуары"
+
+#: templates/base.html:144
+msgid "Rubber made Toys"
+msgstr "Резиновые игрушки"
+
+#: templates/base.html:152
+msgid "Support"
+msgstr "поддержка"
+
+#: templates/base.html:154
+msgid "Frequently Asked Questions"
+msgstr "Часто задаваемые вопросы"
+
+#: templates/base.html:155
+msgid "Terms & Conditions"
+msgstr "Условия использования"
+
+#: templates/base.html:156
+msgid "Privacy Policy"
+msgstr "политика конфиденциальности"
+
+#: templates/base.html:157
+msgid "Report a Payment Issue"
+msgstr "Сообщить о проблеме с оплатой"
+
+#: templates/cart.html:30
+#, fuzzy
+#| msgid "Cart"
+msgid "Cart List"
+msgstr "Список корзины"
+
+#: templates/cart.html:45
+#, fuzzy
+#| msgid "Product list"
+msgid "Product"
+msgstr "продукт"
+
+#: templates/cart.html:46
+msgid "Price"
+msgstr "Цена"
+
+#: templates/cart.html:47
+msgid "Quantity"
+msgstr "Количество"
+
+#: templates/cart.html:48
+msgid "Total"
+msgstr "Общий"
+
+#: templates/index.html:44 templates/index.html:66
+msgid "Select Your New Perfect Style"
+msgstr "Выберите свой новый идеальный стиль"
+
+#: templates/index.html:48 templates/index.html:70
+#, fuzzy
+#| msgid "Shop"
+msgid "Shop Now"
+msgstr "Купить сейчас"
+
+#: templates/index.html:93
+msgid "New Arrivals"
+msgstr "Новые поступления"
 
 #: venv/lib/python3.11/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
@@ -1314,8 +1418,3 @@ msgstr ""
 #: venv/lib/python3.11/site-packages/modeltranslation/widgets.py:24
 msgid "None"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Product list"
-#~ msgid "ProductList"
-#~ msgstr "Список продуктов"
