@@ -14,6 +14,7 @@
 
 </head>
 
+
 {% block css %}{% endblock %}
 <body>
     <header>
@@ -48,10 +49,12 @@
                                         <li><a href="#">{% translate 'Pages' %}</a>
                                             <ul class="submenu">
                                                 <li><a href="login">{% translate 'Login' %}</a></li>
+                                                <li><a href="add-product">{% translate 'Add product' %}</a></li>
                                                 <li><a href="cart">{% translate 'Cart' %}</a></li>
                                                 <li><a href="elements">{% translate 'Element' %}</a></li>
                                                 <li><a href="confirmation">{% translate 'Confirmation' %}</a></li>
                                                 <li><a href="checkout">{% translate 'Product Checkout' %}</a></li>
+                                                <li><a href="logout" class="nav-item nav-link">{% if user.is_authenticated %} {{ user.username }} {% endif %}</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="contact">{% translate 'Contact' %}</a></li>
@@ -189,3 +192,6 @@
 {% block js %}{% endblock %}
 </body>
 </html>
+
+
+

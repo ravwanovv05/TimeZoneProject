@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-09 16:07+0500\n"
+"POT-Creation-Date: 2023-10-09 22:45+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,6 +48,45 @@ msgstr "Картина"
 msgid "Pictures"
 msgstr "Картинки"
 
+#: templates/about.html:41
+#, fuzzy
+#| msgid "About"
+msgid "About Us"
+msgstr "О нас"
+
+#: templates/about.html:55
+msgid "Our Mission"
+msgstr "Наша миссия"
+
+#: templates/about.html:62
+msgid "Our Vision"
+msgstr "Наш взгляд"
+
+#: templates/about.html:85
+msgid "Next Video"
+msgstr "Следующее видео"
+
+#: templates/about.html:100 templates/index.html:358 templates/shop.html:434
+msgid "Free Shipping Method"
+msgstr "Бесплатная доставка"
+
+#: templates/about.html:107 templates/about.html:114 templates/index.html:365
+#: templates/index.html:372 templates/shop.html:441 templates/shop.html:448
+#, fuzzy
+#| msgid "Report a Payment Issue"
+msgid "Secure Payment System"
+msgstr "Сообщить о проблеме с оплатой"
+
+#: templates/add_product.html:29
+#, fuzzy
+#| msgid "Product list"
+msgid "Add Product"
+msgstr "Добавить продукт "
+
+#: templates/add_product.html:41
+msgid "Add"
+msgstr "Добавить"
+
 #: templates/base.html:33
 msgid "Home"
 msgstr ""
@@ -56,7 +95,7 @@ msgstr ""
 msgid "Shop"
 msgstr "Магазин"
 
-#: templates/base.html:35 templates/base.html:128
+#: templates/base.html:35 templates/base.html:129
 msgid "About"
 msgstr "О нас"
 
@@ -91,96 +130,208 @@ msgid "Login"
 msgstr "Авторизоваться"
 
 #: templates/base.html:51
+#, fuzzy
+#| msgid "Product list"
+msgid "Add product"
+msgstr "Добавить продукт "
+
+#: templates/base.html:52
 msgid "Cart"
 msgstr "Корзина"
 
-#: templates/base.html:52
+#: templates/base.html:53
 msgid "Element"
 msgstr "Элемент"
 
-#: templates/base.html:53
+#: templates/base.html:54
 msgid "Confirmation"
 msgstr "Подтверждение"
 
-#: templates/base.html:54
+#: templates/base.html:55
 msgid "Product Checkout"
 msgstr "Оформление заказа продукта"
 
-#: templates/base.html:57
+#: templates/base.html:58
 msgid "Contact"
 msgstr "Контакт"
 
-#: templates/base.html:126
+#: templates/base.html:127
 msgid "Quick Links"
 msgstr "Быстрые ссылки"
 
-#: templates/base.html:129
+#: templates/base.html:130
 msgid "Offers & Discounts"
 msgstr "Предложения и скидки"
 
-#: templates/base.html:130
+#: templates/base.html:131
 msgid "Get Coupon"
 msgstr "Получить купон"
 
-#: templates/base.html:131
+#: templates/base.html:132
 #, fuzzy
 #| msgid "Contact"
 msgid "Contact Us"
 msgstr "Контакт"
 
-#: templates/base.html:139
+#: templates/base.html:140
 #, fuzzy
 #| msgid "Product list"
 msgid "New Products"
 msgstr "продукт"
 
-#: templates/base.html:141
+#: templates/base.html:142
 msgid "Woman Cloth"
 msgstr "Женская платья"
 
-#: templates/base.html:142
+#: templates/base.html:143
 msgid "Fashion Accessories"
 msgstr "Модные аксессуары"
 
-#: templates/base.html:143
+#: templates/base.html:144
 msgid "Man Accessories"
 msgstr "Мужские аксессуары"
 
-#: templates/base.html:144
+#: templates/base.html:145
 msgid "Rubber made Toys"
 msgstr "Резиновые игрушки"
 
-#: templates/base.html:152
+#: templates/base.html:153
 msgid "Support"
 msgstr "поддержка"
 
-#: templates/base.html:154
+#: templates/base.html:155
 msgid "Frequently Asked Questions"
 msgstr "Часто задаваемые вопросы"
 
-#: templates/base.html:155
+#: templates/base.html:156
 msgid "Terms & Conditions"
 msgstr "Условия использования"
 
-#: templates/base.html:156
+#: templates/base.html:157
 msgid "Privacy Policy"
 msgstr "политика конфиденциальности"
 
-#: templates/base.html:157
+#: templates/base.html:158
 msgid "Report a Payment Issue"
 msgstr "Сообщить о проблеме с оплатой"
+
+#: templates/blog.html:54
+msgid "Google inks pact for new 35-storey office"
+msgstr "Google подписывает договор о строительстве нового 35-этажного офиса"
+
+#: templates/blog.html:195
+msgid "Category"
+msgstr "Категория"
+
+#: templates/blog.html:199
+msgid "Restaurant food"
+msgstr "Ресторанная еда"
+
+#: templates/blog.html:205
+msgid "Travel news"
+msgstr "Новости туризма"
+
+#: templates/blog.html:211
+msgid "Modern technology"
+msgstr "Современные технологии"
+
+#: templates/blog.html:217 templates/cart.html:45
+#, fuzzy
+#| msgid "Product list"
+msgid "Product"
+msgstr "продукт"
+
+#: templates/blog.html:223
+#, fuzzy
+#| msgid "Confirmation"
+msgid "Inspiration"
+msgstr "Подтверждение"
+
+#: templates/blog.html:229
+msgid "Health Care"
+msgstr "Здравоохранение"
+
+#: templates/blog.html:237
+msgid "Recent Post"
+msgstr "Недавний пост"
+
+#: templates/blog.html:244
+msgid "January 12, 2019"
+msgstr "12 января 2019 г."
+
+#: templates/blog.html:251
+msgid "The Amazing Hubble"
+msgstr "Удивительный Хаббл"
+
+#: templates/blog.html:253
+msgid "02 Hours ago"
+msgstr "02 часа назад"
+
+#: templates/blog.html:260
+msgid "Astronomy Or Astrology"
+msgstr "Астрономия или астрология"
+
+#: templates/blog.html:262
+msgid "03 Hours ago"
+msgstr "03 часа назад"
+
+#: templates/blog.html:269
+msgid "Asteroids telescope"
+msgstr "Телескоп астероидов"
+
+#: templates/blog.html:276
+msgid "Tag Clouds"
+msgstr "Облака тегов"
+
+#: templates/blog.html:279
+msgid "project"
+msgstr "проект"
+
+#: templates/blog.html:282
+msgid "love"
+msgstr "любовь"
+
+#: templates/blog.html:285
+msgid "technology"
+msgstr "технологии"
+
+#: templates/blog.html:288
+msgid "travel"
+msgstr "путешествовать"
+
+#: templates/blog.html:291
+msgid "restaurant"
+msgstr "ресторан"
+
+#: templates/blog.html:294
+msgid "life style"
+msgstr "Стиль жизни"
+
+#: templates/blog.html:297
+msgid "design"
+msgstr "дизайн"
+
+#: templates/blog.html:300
+msgid "illustration"
+msgstr "иллюстрация"
+
+#: templates/blog.html:307
+msgid "Instagram Feeds"
+msgstr "Ленты Instagram"
+
+#: templates/blog.html:344
+msgid "Newsletter"
+msgstr "Новостная рассылка"
+
+#: templates/blog.html:352
+msgid "Subscribe"
+msgstr "Подписаться"
 
 #: templates/cart.html:30
 #, fuzzy
 #| msgid "Cart"
 msgid "Cart List"
-msgstr "Список корзины"
-
-#: templates/cart.html:45
-#, fuzzy
-#| msgid "Product list"
-msgid "Product"
-msgstr "продукт"
+msgstr "Корзина"
 
 #: templates/cart.html:46
 msgid "Price"
@@ -225,17 +376,6 @@ msgstr "Часы выбора"
 #: templates/index.html:343
 msgid "Show Watches"
 msgstr "Показать часы"
-
-#: templates/index.html:358 templates/shop.html:434
-msgid "Free Shipping Method"
-msgstr "Бесплатная доставка"
-
-#: templates/index.html:365 templates/index.html:372 templates/shop.html:441
-#: templates/shop.html:448
-#, fuzzy
-#| msgid "Report a Payment Issue"
-msgid "Secure Payment System"
-msgstr "Сообщить о проблеме с оплатой"
 
 #: templates/login.html:44
 msgid "New to our Shop?"

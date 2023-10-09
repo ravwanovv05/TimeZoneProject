@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block css %}
     <!-- CSS here -->
@@ -18,11 +19,26 @@
 
 
 {% block content %}
+    <!-- Hero Area Start-->
+    <div class="slider-area ">
+        <div class="single-slider slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>{% translate 'Add Product' %}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Hero Area End-->
     <div class="container">
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn_3">Add</button>
+        <button type="submit" class="btn_3">{% translate 'Add' %}</button>
     </form>
     </div>
 {% endblock %}
