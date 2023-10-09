@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block css %}
     <!-- CSS here -->
@@ -50,7 +51,7 @@
 
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="single-blog">
-                                        <h2>Google inks pact for new 35-storey office</h2>
+                                        <h2>{% translate 'Google inks pact for new 35-storey office' %}</h2>
                                     </a>
                                     <p>That dominion stars lights dominion divide years for fourth have don't stars is that
                                         he earth it first without heaven in place seed it second morning saying.</p>
@@ -191,41 +192,41 @@
                             </aside>
 
                             <aside class="single_sidebar_widget post_category_widget">
-                                <h4 class="widget_title">Category</h4>
+                                <h4 class="widget_title">{% translate 'Category' %}</h4>
                                 <ul class="list cat-list">
                                     <li>
                                         <a href="#" class="d-flex">
-                                            <p>Resaurant food</p>
+                                            <p>{% translate 'Resaurant food' %}</p>
                                             <p>(37)</p>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#" class="d-flex">
-                                            <p>Travel news</p>
+                                            <p>{% translate 'Travel news' %}</p>
                                             <p>(10)</p>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#" class="d-flex">
-                                            <p>Modern technology</p>
+                                            <p>{% translate 'Modern technology' %}</p>
                                             <p>(03)</p>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#" class="d-flex">
-                                            <p>Product</p>
+                                            <p>{% translate 'Product' %}</p>
                                             <p>(11)</p>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#" class="d-flex">
-                                            <p>Inspiration</p>
+                                            <p>{% translate 'Inspiration' %}</p>
                                             <p>21</p>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#" class="d-flex">
-                                            <p>Health Care (21)</p>
+                                            <p>{% translate 'Health Care' %} (21)</p>
                                             <p>09</p>
                                         </a>
                                     </li>
@@ -233,77 +234,77 @@
                             </aside>
 
                             <aside class="single_sidebar_widget popular_post_widget">
-                                <h3 class="widget_title">Recent Post</h3>
+                                <h3 class="widget_title">{% translate 'Recent Post' %}</h3>
                                 <div class="media post_item">
                                     <img src="{% static 'assets/img/post/post_1.png' %}" alt="post">
                                     <div class="media-body">
                                         <a href="single-blog.html">
                                             <h3>From life was you fish...</h3>
                                         </a>
-                                        <p>January 12, 2019</p>
+                                        <p>{% translate 'January 12, 2019' %}</p>
                                     </div>
                                 </div>
                                 <div class="media post_item">
                                     <img src="{% static 'assets/img/post/post_2.png' %}" alt="post">
                                     <div class="media-body">
                                         <a href="single-blog.html">
-                                            <h3>The Amazing Hubble</h3>
+                                            <h3>{% translate 'The Amazing Hubble' %}</h3>
                                         </a>
-                                        <p>02 Hours ago</p>
+                                        <p>{% translate '02 Hours ago' %}</p>
                                     </div>
                                 </div>
                                 <div class="media post_item">
                                     <img src="{% static 'assets/img/post/post_3.png' %}" alt="post">
                                     <div class="media-body">
                                         <a href="single-blog.html">
-                                            <h3>Astronomy Or Astrology</h3>
+                                            <h3>{% translate 'Astronomy Or Astrology' %}</h3>
                                         </a>
-                                        <p>03 Hours ago</p>
+                                        <p>{% translate '03 Hours ago' %}</p>
                                     </div>
                                 </div>
                                 <div class="media post_item">
                                     <img src="{% static 'assets/img/post/post_4.png' %}" alt="post">
                                     <div class="media-body">
                                         <a href="single-blog.html">
-                                            <h3>Asteroids telescope</h3>
+                                            <h3>{% translate 'Asteroids telescope' %}</h3>
                                         </a>
                                         <p>01 Hours ago</p>
                                     </div>
                                 </div>
                             </aside>
                             <aside class="single_sidebar_widget tag_cloud_widget">
-                                <h4 class="widget_title">Tag Clouds</h4>
+                                <h4 class="widget_title">{% translate 'Tag Clouds' %}</h4>
                                 <ul class="list">
                                     <li>
-                                        <a href="#">project</a>
+                                        <a href="#">{% translate 'project' %}</a>
                                     </li>
                                     <li>
-                                        <a href="#">love</a>
+                                        <a href="#">{% translate 'love' %}</a>
                                     </li>
                                     <li>
-                                        <a href="#">technology</a>
+                                        <a href="#">{% translate 'technology' %}</a>
                                     </li>
                                     <li>
-                                        <a href="#">travel</a>
+                                        <a href="#">{% translate 'travel' %}</a>
                                     </li>
                                     <li>
-                                        <a href="#">restaurant</a>
+                                        <a href="#">{% translate 'restaurant' %}</a>
                                     </li>
                                     <li>
-                                        <a href="#">life style</a>
+                                        <a href="#">{% translate 'life style' %}</a>
                                     </li>
                                     <li>
-                                        <a href="#">design</a>
+                                        <a href="#">{% translate 'design' %}</a>
                                     </li>
                                     <li>
-                                        <a href="#">illustration</a>
+                                        <a href="#">{% translate 'illustration' %}</a>
                                     </li>
                                 </ul>
                             </aside>
 
 
                             <aside class="single_sidebar_widget instagram_feeds">
-                                <h4 class="widget_title">Instagram Feeds</h4>
+                                <h4 class="widget_title">{% translate 'Instagram Feeds' %}</h4>
                                 <ul class="instagram_row flex-wrap">
                                     <li>
                                         <a href="#">
@@ -340,7 +341,7 @@
 
 
                             <aside class="single_sidebar_widget newsletter_widget">
-                                <h4 class="widget_title">Newsletter</h4>
+                                <h4 class="widget_title">{% translate 'Newsletter' %}</h4>
 
                                 <form action="#">
                                     <div class="form-group">
@@ -348,7 +349,7 @@
                                             onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
                                     </div>
                                     <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Subscribe</button>
+                                        type="submit">{% translate 'Subscribe' %}</button>
                                 </form>
                             </aside>
                         </div>

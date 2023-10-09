@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block css %}
     <!-- CSS here -->
@@ -40,10 +41,9 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="login_part_text text-center">
                             <div class="login_part_text_iner">
-                                <h2>New to our Shop?</h2>
-                                <p>There are advances being made in science and technology
-                                    everyday, and a good example of this is the</p>
-                                <a href="register" class="btn_3">Create an Account</a>
+                                <h2>{% translate 'New to our Shop?' %}</h2>
+                                <p>{% translate 'There are advances being made in science and technology everyday, and a good example of this is the' %}</p>
+                                <a href="register" class="btn_3">{% translate 'Create an Account' %}</a>
                             </div>
                         </div>
                     </div>
@@ -75,12 +75,12 @@
                                     <div class="col-md-12 form-group">
                                         <div class="creat_account d-flex align-items-center">
                                             <input type="checkbox" id="f-option" name="selector">
-                                            <label for="f-option">Remember me</label>
+                                            <label for="f-option">{% translate 'Remember me' %}</label>
                                         </div>
                                         <button type="submit" value="submit" class="btn_3">
                                             log in
                                         </button>
-                                        <a class="lost_pass" href="reset-password">forget password?</a>
+                                        <a class="lost_pass" href="reset-password">{% translate 'forgot password?' %}</a>
 
                                     </div>
                                 </form>

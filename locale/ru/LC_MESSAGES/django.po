@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-09 14:36+0500\n"
+"POT-Creation-Date: 2023-10-09 16:07+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -194,6 +194,16 @@ msgstr "Количество"
 msgid "Total"
 msgstr "Общий"
 
+#: templates/cart.html:181
+msgid "Continue Shopping"
+msgstr "Продолжить покупки"
+
+#: templates/cart.html:182
+#, fuzzy
+#| msgid "Product Checkout"
+msgid "Proceed to checkout"
+msgstr "Оформление заказа продукта"
+
 #: templates/index.html:44 templates/index.html:66
 msgid "Select Your New Perfect Style"
 msgstr "Выберите свой новый идеальный стиль"
@@ -207,6 +217,55 @@ msgstr "Купить сейчас"
 #: templates/index.html:93
 msgid "New Arrivals"
 msgstr "Новые поступления"
+
+#: templates/index.html:322
+msgid "Watch of Choice"
+msgstr "Часы выбора"
+
+#: templates/index.html:343
+msgid "Show Watches"
+msgstr "Показать часы"
+
+#: templates/index.html:358 templates/shop.html:434
+msgid "Free Shipping Method"
+msgstr "Бесплатная доставка"
+
+#: templates/index.html:365 templates/index.html:372 templates/shop.html:441
+#: templates/shop.html:448
+#, fuzzy
+#| msgid "Report a Payment Issue"
+msgid "Secure Payment System"
+msgstr "Сообщить о проблеме с оплатой"
+
+#: templates/login.html:44
+msgid "New to our Shop?"
+msgstr "Впервые в нашем магазине?"
+
+#: templates/login.html:45
+msgid ""
+"There are advances being made in science and technology everyday, and a good "
+"example of this is the"
+msgstr ""
+
+#: templates/login.html:46
+msgid "Create an Account"
+msgstr "зарегистрироваться"
+
+#: templates/login.html:78
+msgid "Remember me"
+msgstr "Запомнить меня"
+
+#: templates/login.html:83
+msgid "forgot password?"
+msgstr "Забыли пароль?"
+
+#: templates/shop.html:41
+msgid "Watch Shop"
+msgstr "Магазин часов"
+
+#: templates/shop.html:123
+msgid "Add to cart"
+msgstr "Добавить"
 
 #: venv/lib/python3.11/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
