@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-08 17:35+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: root/main/apps.py:8
+msgid "main"
+msgstr "Основной"
+
+#: root/main/models.py:20
+#, fuzzy
+#| msgid "Product list"
+msgid "ProductsList"
+msgstr "Список продуктов"
+
+#: root/main/models.py:28
+msgid "Picture"
+msgstr "Картина"
+
+#: root/main/models.py:29
+msgid "Pictures"
+msgstr "Картинки"
+
+#~ msgid "Shop"
+#~ msgstr "Магазин"
+
+#~ msgid "About"
+#~ msgstr "О нас"
+
+#~ msgid "Latest"
+#~ msgstr "Последний"
+
+#~ msgid "Product list"
+#~ msgstr "Список продуктов"
+
+#~ msgid "Product details"
+#~ msgstr "Информация о продукте"
+
+#~ msgid "Blog"
+#~ msgstr "Блог"
+
+#~ msgid "Blog Details"
+#~ msgstr "Подробности блога"
+
+#, fuzzy
+#~| msgid "Messages"
+#~ msgid "Pages"
+#~ msgstr "Страницы"
+
+#~ msgid "Login"
+#~ msgstr "Авторизоваться"
+
+#~ msgid "Cart"
+#~ msgstr "Корзина"
+
+#~ msgid "Element"
+#~ msgstr "Элемент"
+
+#~ msgid "Confirmation"
+#~ msgstr "Подтверждение"
+
+#~ msgid "Product Checkout"
+#~ msgstr "Оформление заказа продукта"
+
+#~ msgid "Contact"
+#~ msgstr "Контакт"
+
+#~ msgid "Messages"
+#~ msgstr "Сообщения"
+
+#~ msgid "Site Maps"
+#~ msgstr "Карты сайта"
+
+#~ msgid "Static Files"
+#~ msgstr "Статические файлы"
+
+#~ msgid "Syndication"
+#~ msgstr "Синдикация"
+
+#, fuzzy
+#~| msgid "Product list"
+#~ msgid "ProductList"
+#~ msgstr "Список продуктов"
