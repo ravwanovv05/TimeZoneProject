@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-11 09:22+0500\n"
+"POT-Creation-Date: 2023-10-11 09:54+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -111,7 +111,7 @@ msgstr "Список продуктов"
 msgid "Product details"
 msgstr "Информация о продукте"
 
-#: templates/base.html:43 templates/base.html:45
+#: templates/base.html:43 templates/base.html:45 templates/blog.html:29
 msgid "Blog"
 msgstr "Блог"
 
@@ -125,7 +125,7 @@ msgstr "Подробности блога"
 msgid "Pages"
 msgstr "Страницы"
 
-#: templates/base.html:51
+#: templates/base.html:51 templates/login.html:29
 msgid "Login"
 msgstr "Авторизоваться"
 
@@ -143,7 +143,7 @@ msgstr "Корзина"
 msgid "Element"
 msgstr "Элемент"
 
-#: templates/base.html:55
+#: templates/base.html:55 templates/confirmation.html:29
 msgid "Confirmation"
 msgstr "Подтверждение"
 
@@ -214,6 +214,12 @@ msgstr "политика конфиденциальности"
 #: templates/base.html:160
 msgid "Report a Payment Issue"
 msgstr "Сообщить о проблеме с оплатой"
+
+#: templates/blog-details.html:41
+#, fuzzy
+#| msgid "Blog Details"
+msgid "Blog details"
+msgstr "Подробности блога"
 
 #: templates/blog.html:54
 msgid "Google inks pact for new 35-storey office"
@@ -355,6 +361,24 @@ msgstr "Продолжить покупки"
 msgid "Proceed to checkout"
 msgstr "Оформление заказа продукта"
 
+#: templates/checkout.html:32
+#, fuzzy
+#| msgid "Product Checkout"
+msgid "Checkout"
+msgstr "Оформление заказа продукта"
+
+#: templates/contact.html:41
+#, fuzzy
+#| msgid "Contact"
+msgid "Contacts"
+msgstr "Контакт"
+
+#: templates/elements.html:41
+#, fuzzy
+#| msgid "Element"
+msgid "Elements"
+msgstr "Элементы"
+
 #: templates/index.html:44 templates/index.html:66
 msgid "Select Your New Perfect Style"
 msgstr "Выберите свой новый идеальный стиль"
@@ -369,7 +393,7 @@ msgstr "Купить сейчас"
 msgid "New Arrivals"
 msgstr "Новые поступления"
 
-#: templates/index.html:322
+#: templates/index.html:322 templates/index.html:341
 msgid "Watch of Choice"
 msgstr "Часы выбора"
 
@@ -399,7 +423,7 @@ msgstr "Запомнить меня"
 msgid "forgot password?"
 msgstr "Забыли пароль?"
 
-#: templates/shop.html:41
+#: templates/product_details.html:30 templates/shop.html:41
 msgid "Watch Shop"
 msgstr "Магазин часов"
 

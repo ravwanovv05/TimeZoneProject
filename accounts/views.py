@@ -84,17 +84,20 @@ class LoginView(View):
         return render(request, "login.html")
 
     def post(self, request):
-        if request.method == 'POST':
-            username = request.POST.get('username')
-            password = request.POST.get('password')
+        try:
+            if request.method == 'POST':
+                username = request.POST.get('username')
+                password = request.POST.get('password')
 
-            user = authenticate(username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect('/')
-            else:
-                messages.error(request, 'Invalid username or password!')
-                return redirect('/accounts/login')
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    login(request, user)
+                    return redirect('/')
+                else:
+                    messages.error(request, 'Invalid username or password!')
+                    return redirect('login')
+        except:
+            return redirect('login')
 
 
 class LogoutView(View):

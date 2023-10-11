@@ -97,7 +97,7 @@
                       </div>
                     </td>
                     <td>
-                      <span id="total_price_{{ product.id }}" ></span>
+                      <span id="total_price_{{ product.id }}"></span>
                     </td>
                     <td>
                         <form method="post">
@@ -224,7 +224,7 @@
     <!-- contact js -->
     <script src="{% static './assets/js/contact.js' %}"></script>
     <script src="{% static './assets/js/jquery.form.js' %}"></script>
-    <script src="{% static './assets/js/jquery.validate.min.js' %}' %}"></script>
+    <script src="{% static './assets/js/jquery.validate.min.js' %}"></script>
     <script src="{% static './assets/js/mail-script.js' %}"></script>
     <script src="{% static './assets/js/jquery.ajaxchimp.min.js' %}"></script>
 
@@ -235,7 +235,8 @@
     <!-- Increment Function -->
     <script>
         const increment = (price, id) => {
-            fetch('http://127.0.0.1:8000/increment-count', {
+            console.log(document.getElementById('product_count_'+id).value)
+            fetch('http://127.0.0.1:8000/{{ LANGUAGE_CODE }}/increment-count', {
                 method: 'POST',
                 body: JSON.stringify({
                     id: id
@@ -245,13 +246,16 @@
         }
 
         const decrement = (price, id) => {
-            fetch('http://127.0.0.1:8000/decrement-count', {
-                method: 'POST',
-                body: JSON.stringify({
-                    id: id
-                })
-            }).then(rsp=>rsp.json()).then(response=>console.log())
-            calculate_total(price, id, 2)
+            if (document.getElementById('product_count_'+id).value > 0) {
+                console.log(document.getElementById('product_count_'+id))
+                fetch('http://127.0.0.1:8000/{{ LANGUAGE_CODE }}/decrement-count', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        id: id
+                    })
+                }).then(rsp=>rsp.json()).then(response=>console.log())
+                calculate_total(price, id, 2)
+            }
         }
 
         const calculate_total = (price,id, value) => {
