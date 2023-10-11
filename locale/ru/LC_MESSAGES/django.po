@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-09 22:45+0500\n"
+"POT-Creation-Date: 2023-10-11 09:22+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,131 +87,131 @@ msgstr "Добавить продукт "
 msgid "Add"
 msgstr "Добавить"
 
-#: templates/base.html:33
+#: templates/base.html:34
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:34
+#: templates/base.html:35
 msgid "Shop"
 msgstr "Магазин"
 
-#: templates/base.html:35 templates/base.html:129
+#: templates/base.html:36 templates/base.html:131
 msgid "About"
 msgstr "О нас"
 
-#: templates/base.html:36
+#: templates/base.html:37
 msgid "Latest"
 msgstr "Последний"
 
-#: templates/base.html:38
+#: templates/base.html:39
 msgid "Product list"
 msgstr "Список продуктов"
 
-#: templates/base.html:39
+#: templates/base.html:40
 msgid "Product details"
 msgstr "Информация о продукте"
 
-#: templates/base.html:42 templates/base.html:44
+#: templates/base.html:43 templates/base.html:45
 msgid "Blog"
 msgstr "Блог"
 
-#: templates/base.html:45
+#: templates/base.html:46
 msgid "Blog Details"
 msgstr "Подробности блога"
 
-#: templates/base.html:48
+#: templates/base.html:49
 #, fuzzy
 #| msgid "Messages"
 msgid "Pages"
 msgstr "Страницы"
 
-#: templates/base.html:50
+#: templates/base.html:51
 msgid "Login"
 msgstr "Авторизоваться"
 
-#: templates/base.html:51
+#: templates/base.html:52
 #, fuzzy
 #| msgid "Product list"
 msgid "Add product"
 msgstr "Добавить продукт "
 
-#: templates/base.html:52
+#: templates/base.html:53
 msgid "Cart"
 msgstr "Корзина"
 
-#: templates/base.html:53
+#: templates/base.html:54
 msgid "Element"
 msgstr "Элемент"
 
-#: templates/base.html:54
+#: templates/base.html:55
 msgid "Confirmation"
 msgstr "Подтверждение"
 
-#: templates/base.html:55
+#: templates/base.html:56
 msgid "Product Checkout"
 msgstr "Оформление заказа продукта"
 
-#: templates/base.html:58
+#: templates/base.html:60
 msgid "Contact"
 msgstr "Контакт"
 
-#: templates/base.html:127
+#: templates/base.html:129
 msgid "Quick Links"
 msgstr "Быстрые ссылки"
 
-#: templates/base.html:130
+#: templates/base.html:132
 msgid "Offers & Discounts"
 msgstr "Предложения и скидки"
 
-#: templates/base.html:131
+#: templates/base.html:133
 msgid "Get Coupon"
 msgstr "Получить купон"
 
-#: templates/base.html:132
+#: templates/base.html:134
 #, fuzzy
 #| msgid "Contact"
 msgid "Contact Us"
 msgstr "Контакт"
 
-#: templates/base.html:140
+#: templates/base.html:142
 #, fuzzy
 #| msgid "Product list"
 msgid "New Products"
 msgstr "продукт"
 
-#: templates/base.html:142
+#: templates/base.html:144
 msgid "Woman Cloth"
 msgstr "Женская платья"
 
-#: templates/base.html:143
+#: templates/base.html:145
 msgid "Fashion Accessories"
 msgstr "Модные аксессуары"
 
-#: templates/base.html:144
+#: templates/base.html:146
 msgid "Man Accessories"
 msgstr "Мужские аксессуары"
 
-#: templates/base.html:145
+#: templates/base.html:147
 msgid "Rubber made Toys"
 msgstr "Резиновые игрушки"
 
-#: templates/base.html:153
+#: templates/base.html:155
 msgid "Support"
 msgstr "поддержка"
 
-#: templates/base.html:155
+#: templates/base.html:157
 msgid "Frequently Asked Questions"
 msgstr "Часто задаваемые вопросы"
 
-#: templates/base.html:156
+#: templates/base.html:158
 msgid "Terms & Conditions"
 msgstr "Условия использования"
 
-#: templates/base.html:157
+#: templates/base.html:159
 msgid "Privacy Policy"
 msgstr "политика конфиденциальности"
 
-#: templates/base.html:158
+#: templates/base.html:160
 msgid "Report a Payment Issue"
 msgstr "Сообщить о проблеме с оплатой"
 
@@ -373,7 +373,7 @@ msgstr "Новые поступления"
 msgid "Watch of Choice"
 msgstr "Часы выбора"
 
-#: templates/index.html:343
+#: templates/index.html:324 templates/index.html:343
 msgid "Show Watches"
 msgstr "Показать часы"
 
