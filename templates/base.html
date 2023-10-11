@@ -48,7 +48,6 @@
                                         </li>
                                         <li><a href="#">{% translate 'Pages' %}</a>
                                             <ul class="submenu">
-                                                <li><a href="login">{% translate 'Login' %}</a></li>
 {#                                                {% if user.is_staf == True %}#}
                                                 <li><a href="add-product">{% translate 'Add product' %}</a></li>
 {#                                                {% endif %}#}
@@ -56,10 +55,16 @@
                                                 <li><a href="elements">{% translate 'Element' %}</a></li>
                                                 <li><a href="confirmation">{% translate 'Confirmation' %}</a></li>
                                                 <li><a href="checkout">{% translate 'Product Checkout' %}</a></li>
-                                                <li><a href="logout" class="nav-item nav-link">{% if user.is_authenticated %} {{ user.username }} {% endif %}</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="contact">{% translate 'Contact' %}</a></li>
+                                        <li><a href="#">{% translate 'account' %}</a>
+                                            <ul class="submenu">
+                                                <li><a href="login">{% translate 'login' %}</a></li>
+                                                <li><a href="logout">{% translate 'log out' %}</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>{% if user.is_authenticated %}{{ user.username }}{% endif %}</li>
                                         <li>
                                             <form action="{% url 'set_language' %}" method="post">
                                                 {% csrf_token %}
