@@ -16,9 +16,13 @@ class ProductList(models.Model):
         print(validated_data)
         return super().save(**validated_data)
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         verbose_name = _('ProductList')
         verbose_name_plural = _('ProductsList')
+
 
 
 class Picture(models.Model):
