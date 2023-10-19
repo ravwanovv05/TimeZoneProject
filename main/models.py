@@ -24,7 +24,6 @@ class ProductList(models.Model):
         verbose_name_plural = _('ProductsList')
 
 
-
 class Picture(models.Model):
     image = models.ImageField(upload_to='pics')
     product = models.ForeignKey(ProductList, on_delete=models.CASCADE)
