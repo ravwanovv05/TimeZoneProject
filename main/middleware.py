@@ -22,3 +22,7 @@ class IPRestrictedMiddleware:
 class HelloAPIView(View):
     def get(self, request):
         return JsonResponse({'success': True, 'message': 'Hello World!'})
+
+
+
+
