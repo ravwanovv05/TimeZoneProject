@@ -24,3 +24,7 @@ class HelloAPIView(View):
         return JsonResponse({'success': True, 'message': 'Hello World!'})
 
 
+
+
+
+
